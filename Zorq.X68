@@ -770,8 +770,8 @@ battleDire_msg: dc.b    '2) Travel North, '
                 dc.b    $0D,$0A
                 dc.b    '3) Travel East'
                 dc.b    $0D,$0A
-                dc.b    '4) Travel South'
-                dc.b    $0D,$0A
+*                dc.b    '4) Travel South'
+*                dc.b    $0D,$0A
                 dc.b    '5) Travel West'
                 dc.b    $0D,$0A,0
 win_msg:        dc.b    'You have conquered the land'
@@ -818,6 +818,7 @@ health:     ds.w    1
 score:      ds.w    1 reserve space for score
 
     end start
+
 
 
 

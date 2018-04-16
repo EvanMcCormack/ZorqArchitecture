@@ -1,6 +1,6 @@
 00001000 Starting Address
 Assembler used: EASy68K Editor/Assembler v5.16.01
-Created On: 4/16/2018 4:06:23 AM
+Created On: 4/16/2018 4:04:46 PM
 
 00000000                             1  *-----------------------------------------------------------
 00000000                             2  * Title      : Zorq Quest
@@ -159,7 +159,7 @@ Created On: 4/16/2018 4:06:23 AM
 00003116  6700 0312                155      beq     battle
 0000311A  6100 0592                156      bsr     endl            print a CR and LF
 0000311E  6100 0542                157      bsr     decorate        decorate with dots using a loop
-00003122  43F9 00003C78            158      lea     update_msg,A1   
+00003122  43F9 00003C67            158      lea     update_msg,A1   
 00003128  6100 0538                159      bsr     decorate
 0000312C  4E75                     160      rts
 0000312E                           161      
@@ -493,7 +493,7 @@ Created On: 4/16/2018 4:06:23 AM
 000034CA                           489  *------------------------North--------------------------
 000034CA                           490  *-------------------------------------------------------
 000034CA                           491  north:
-000034CA  43F9 00003A34            492      lea     north_msg,A1
+000034CA  43F9 00003A23            492      lea     north_msg,A1
 000034D0  103C 000E                493      move.b  #14,D0          move literal 14 to DO
 000034D4  4E4F                     494      trap    #15 
 000034D6  103C 0004                495      move.b  #4,D0
@@ -507,7 +507,7 @@ Created On: 4/16/2018 4:06:23 AM
 000034F4  4E75                     503      rts
 000034F6                           504  
 000034F6                           505  attackN:
-000034F6  43F9 00003B15            506       lea    attack_msg, A1
+000034F6  43F9 00003B04            506       lea    attack_msg, A1
 000034FC  103C 000E                507       move.b  #14,D0          move literal 14 to DO
 00003500  4E4F                     508       trap    #15 
 00003502  103C 0004                509       move.b  #4,D0
@@ -526,7 +526,7 @@ Created On: 4/16/2018 4:06:23 AM
 0000352A                           522  *------------------------East---------------------------
 0000352A                           523  *-------------------------------------------------------
 0000352A                           524  east:
-0000352A  43F9 00003A81            525      lea     east_msg,A1
+0000352A  43F9 00003A70            525      lea     east_msg,A1
 00003530  103C 000E                526      move.b  #14,D0          move literal 14 to DO
 00003534  4E4F                     527      trap    #15 
 00003536  103C 0004                528      move.b  #4,D0
@@ -540,7 +540,7 @@ Created On: 4/16/2018 4:06:23 AM
 00003554  4E75                     536      rts
 00003556                           537  
 00003556                           538  attackE:
-00003556  43F9 00003B15            539       lea    attack_msg, A1
+00003556  43F9 00003B04            539       lea    attack_msg, A1
 0000355C  103C 000E                540       move.b  #14,D0          move literal 14 to DO
 00003560  4E4F                     541       trap    #15 
 00003562  103C 0004                542       move.b  #4,D0
@@ -559,7 +559,7 @@ Created On: 4/16/2018 4:06:23 AM
 0000358A                           555  *------------------------West---------------------------
 0000358A                           556  *-------------------------------------------------------
 0000358A                           557  west:
-0000358A  43F9 00003AC4            558      lea     west_msg,A1
+0000358A  43F9 00003AB3            558      lea     west_msg,A1
 00003590  103C 000E                559      move.b  #14,D0          move literal 14 to DO
 00003594  4E4F                     560      trap    #15 
 00003596  6100 FAF4                561      bsr     update
@@ -571,7 +571,7 @@ Created On: 4/16/2018 4:06:23 AM
 000035A4                           567  *------------------------Win----------------------------
 000035A4                           568  *-------------------------------------------------------
 000035A4                           569  win:
-000035A4  43F9 00003A16            570      lea     win_msg,A1
+000035A4  43F9 00003A05            570      lea     win_msg,A1
 000035AA  103C 000E                571      move.b  #14,D0
 000035AE  4E4F                     572      trap    #15
 000035B0  6100 FADA                573      bsr     update
@@ -586,7 +586,7 @@ Created On: 4/16/2018 4:06:23 AM
 000035BE                           582  draw:
 000035BE  6100 00EE                583      bsr     endl
 000035C2  6100 009E                584      bsr     decorate
-000035C6  43F9 00003C8A            585      lea     draw_msg,A1
+000035C6  43F9 00003C79            585      lea     draw_msg,A1
 000035CC  6100 0094                586      bsr     decorate
 000035D0  4E75                     587      rts
 000035D2                           588  
@@ -603,7 +603,7 @@ Created On: 4/16/2018 4:06:23 AM
 000035D2                           599  distance:
 000035D2  6100 00DA                600      bsr     endl
 000035D6  6100 008A                601      bsr     decorate
-000035DA  43F9 00003B36            602      lea     distance_msg,A1
+000035DA  43F9 00003B25            602      lea     distance_msg,A1
 000035E0  103C 000E                603      move.b  #14,D0
 000035E4  4E4F                     604      trap    #15
 000035E6  6100 007A                605      bsr     decorate
@@ -615,7 +615,7 @@ Created On: 4/16/2018 4:06:23 AM
 000035EC                           611  gameplay:
 000035EC  6100 00C0                612      bsr     endl
 000035F0  6100 0070                613      bsr     decorate
-000035F4  43F9 00003C69            614      lea     gameplay_msg,A1
+000035F4  43F9 00003C58            614      lea     gameplay_msg,A1
 000035FA  103C 000E                615      move.b  #14,D0
 000035FE  4E4F                     616      trap    #15
 00003600  6100 0060                617      bsr     decorate
@@ -630,7 +630,7 @@ Created On: 4/16/2018 4:06:23 AM
 0000360A                           626  
 0000360A  6100 00A2                627      bsr     endl
 0000360E  6100 0052                628      bsr     decorate
-00003612  43F9 00003CD6            629      lea     hud_msg,A1
+00003612  43F9 00003CC5            629      lea     hud_msg,A1
 00003618  103C 000E                630      move.b  #14,D0
 0000361C  4E4F                     631      trap    #15
 0000361E  1213                     632      move.b  (A3),D1     retrieve the value A3 point to and move to D1         intrepret value in D0, which 3 which displays D1
@@ -647,14 +647,14 @@ Created On: 4/16/2018 4:06:23 AM
 0000362E  6600 0010                643      bne     collision_miss if x is equal to 100, then hit
 00003632                           644  collision_hit:
 00003632                           645      *hit
-00003632  43F9 00003C98            646      lea     hit_msg,A1
+00003632  43F9 00003C87            646      lea     hit_msg,A1
 00003638  303C 000E                647      move    #14,D0
 0000363C  4E4F                     648      trap    #15
 0000363E  4E75                     649      rts
 00003640                           650      
 00003640                           651  collision_miss:
 00003640                           652      *miss
-00003640  43F9 00003CA0            653      lea     miss_msg,A1
+00003640  43F9 00003C8F            653      lea     miss_msg,A1
 00003646  303C 000E                654      move    #14,D0
 0000364A  4E4F                     655      trap    #15
 0000364C  4E75                     656      rts
@@ -665,7 +665,7 @@ Created On: 4/16/2018 4:06:23 AM
 0000364E                           661  loop:
 0000364E  163C 0005                662      move.b  #5, D3 loop counter D3=5
 00003652                           663  next:
-00003652  43F9 00003CA6            664      lea     loop_msg,A1
+00003652  43F9 00003C95            664      lea     loop_msg,A1
 00003658  103C 000E                665      move.b  #14,D0
 0000365C  4E4F                     666      trap    #15
 0000365E  5343                     667      sub     #1,D3   decrement loop counter
@@ -678,7 +678,7 @@ Created On: 4/16/2018 4:06:23 AM
 00003662  163C 003C                674      move.b  #60, D3
 00003666  6100 0046                675      bsr     endl
 0000366A                           676  out:
-0000366A  43F9 00003CA6            677      lea     loop_msg,A1
+0000366A  43F9 00003C95            677      lea     loop_msg,A1
 00003670  103C 000E                678      move.b  #14,D0
 00003674  4E4F                     679      trap    #15
 00003676  5343                     680      sub     #1,D3   decrement loop counter
@@ -696,7 +696,7 @@ Created On: 4/16/2018 4:06:23 AM
 0000368C                           692  *-------------------------------------------------------
 0000368C                           693  replay:
 0000368C  6100 0020                694      bsr     endl
-00003690  43F9 00003CA8            695      lea     replay_msg,A1
+00003690  43F9 00003C97            695      lea     replay_msg,A1
 00003696  103C 000E                696      move.b  #14,D0
 0000369A  4E4F                     697      trap    #15
 0000369C                           698      
@@ -774,54 +774,54 @@ Created On: 4/16/2018 4:06:23 AM
 000039E2= 0D 0A                    770                  dc.b    $0D,$0A
 000039E4= 33 29 20 54 72 61 ...    771                  dc.b    '3) Travel East'
 000039F2= 0D 0A                    772                  dc.b    $0D,$0A
-000039F4= 34 29 20 54 72 61 ...    773                  dc.b    '4) Travel South'
-00003A03= 0D 0A                    774                  dc.b    $0D,$0A
-00003A05= 35 29 20 54 72 61 ...    775                  dc.b    '5) Travel West'
-00003A13= 0D 0A 00                 776                  dc.b    $0D,$0A,0
-00003A16= 59 6F 75 20 68 61 ...    777  win_msg:        dc.b    'You have conquered the land'
-00003A31= 0D 0A 00                 778                  dc.b    $0D,$0A,0
-00003A34= 54 68 65 72 65 20 ...    779  north_msg:      dc.b    'There seems to be a weak mountain tribe to the north'
-00003A68= 0D 0A                    780                  dc.b    $0D,$0A
-00003A6A= 31 29 20 52 65 74 ...    781                  dc.b    '1) Return'
-00003A73= 0D 0A                    782                  dc.b    $0D,$0A
-00003A75= 32 29 20 41 74 74 ...    783                  dc.b    '2) Attack'
-00003A7E= 0D 0A 00                 784                  dc.b    $0D,$0A,0
-00003A81= 54 68 65 72 65 20 ...    785  east_msg:       dc.b    'There is a very strong Kingdom to the East'
-00003AAB= 0D 0A                    786                  dc.b    $0D,$0A
-00003AAD= 31 29 20 52 65 74 ...    787                  dc.b    '1) Return'
-00003AB6= 0D 0A                    788                  dc.b    $0D,$0A
-00003AB8= 32 29 20 41 74 74 ...    789                  dc.b    '2) Attack'
-00003AC1= 0D 0A 00                 790                  dc.b    $0D,$0A,0
-00003AC4= 54 68 65 20 68 6F ...    791  west_msg:       dc.b    'The horde of monsters have gotten closer,'
-00003AED= 0D 0A                    792                  dc.b    $0D,$0A
-00003AEF= 74 68 65 72 65 20 ...    793                  dc.b    'there is no travelling west anymore'
-00003B12= 0D 0A 00                 794                  dc.b    $0D,$0A,0
-00003B15= 48 6F 77 20 6D 61 ...    795  attack_msg:     dc.b    'How many soldiers will you send?',0
-00003B36= 4D 69 73 73 69 6F ...    796  distance_msg:   dc.b    'Mission distance e.g. 40 (with 100 units of feed  '
-00003B68= 0D 0A                    797                  dc.b    $0D,$0A
-00003B6A= 4F 6E 65 20 54 68 ...    798                  dc.b    'One Third speed 20 units remain for manuvouirs) horses '
-00003BA1= 0D 0A                    799                  dc.b    $0D,$0A
-00003BA3= 48 6F 72 73 65 73 ...    800                  dc.b    'Horses without feed are lost.'
-00003BC0= 0D 0A                    801                  dc.b    $0D,$0A
-00003BC2= 45 6E 74 65 72 20 ...    802                  dc.b    'Enter mission distance : ',0
-00003BDC= 45 61 63 68 20 68 ...    803  soldiers_msg:       dc.b    'Each horses need at least 1 Knight and an Stable Hand'
-00003C11= 0D 0A                    804                  dc.b    $0D,$0A
-00003C13= 6D 69 6E 69 6D 75 ...    805                  dc.b    'minimum requirement is 2 i.e. Stable Hand x 1 and Knight x 1.'
-00003C50= 0D 0A                    806                  dc.b    $0D,$0A
-00003C52= 45 6E 74 65 72 20 ...    807                  dc.b    'Enter # of soldiers : ',0
-00003C69= 41 64 64 20 47 61 ...    808  gameplay_msg:   dc.b    'Add Gameplay !',0
-00003C78= 55 70 64 61 74 65 ...    809  update_msg:     dc.b    'Update Gameplay !',0
-00003C8A= 44 72 61 77 20 53 ...    810  draw_msg:       dc.b    'Draw Screen !',0
-00003C98= 53 74 72 69 6B 65 ...    811  hit_msg:        dc.b    'Strike!',0
-00003CA0= 4D 69 73 73 21 00        812  miss_msg:       dc.b    'Miss!',0
-00003CA6= 2E 00                    813  loop_msg:       dc.b    '.',0
-00003CA8= 45 6E 74 65 72 20 ...    814  replay_msg:     dc.b    'Enter 0 to Quit any other number to replay : ',0
-00003CD6= 53 63 6F 72 65 20 ...    815  hud_msg:        dc.b    'Score : ',0
-00003CDF                           816  
-00003CE0                           817  health:     ds.w    1
-00003CE2                           818  score:      ds.w    1 reserve space for score
-00003CE4                           819  
-00003CE4                           820      end start
+000039F4                           773  *                dc.b    '4) Travel South'
+000039F4                           774  *                dc.b    $0D,$0A
+000039F4= 35 29 20 54 72 61 ...    775                  dc.b    '5) Travel West'
+00003A02= 0D 0A 00                 776                  dc.b    $0D,$0A,0
+00003A05= 59 6F 75 20 68 61 ...    777  win_msg:        dc.b    'You have conquered the land'
+00003A20= 0D 0A 00                 778                  dc.b    $0D,$0A,0
+00003A23= 54 68 65 72 65 20 ...    779  north_msg:      dc.b    'There seems to be a weak mountain tribe to the north'
+00003A57= 0D 0A                    780                  dc.b    $0D,$0A
+00003A59= 31 29 20 52 65 74 ...    781                  dc.b    '1) Return'
+00003A62= 0D 0A                    782                  dc.b    $0D,$0A
+00003A64= 32 29 20 41 74 74 ...    783                  dc.b    '2) Attack'
+00003A6D= 0D 0A 00                 784                  dc.b    $0D,$0A,0
+00003A70= 54 68 65 72 65 20 ...    785  east_msg:       dc.b    'There is a very strong Kingdom to the East'
+00003A9A= 0D 0A                    786                  dc.b    $0D,$0A
+00003A9C= 31 29 20 52 65 74 ...    787                  dc.b    '1) Return'
+00003AA5= 0D 0A                    788                  dc.b    $0D,$0A
+00003AA7= 32 29 20 41 74 74 ...    789                  dc.b    '2) Attack'
+00003AB0= 0D 0A 00                 790                  dc.b    $0D,$0A,0
+00003AB3= 54 68 65 20 68 6F ...    791  west_msg:       dc.b    'The horde of monsters have gotten closer,'
+00003ADC= 0D 0A                    792                  dc.b    $0D,$0A
+00003ADE= 74 68 65 72 65 20 ...    793                  dc.b    'there is no travelling west anymore'
+00003B01= 0D 0A 00                 794                  dc.b    $0D,$0A,0
+00003B04= 48 6F 77 20 6D 61 ...    795  attack_msg:     dc.b    'How many soldiers will you send?',0
+00003B25= 4D 69 73 73 69 6F ...    796  distance_msg:   dc.b    'Mission distance e.g. 40 (with 100 units of feed  '
+00003B57= 0D 0A                    797                  dc.b    $0D,$0A
+00003B59= 4F 6E 65 20 54 68 ...    798                  dc.b    'One Third speed 20 units remain for manuvouirs) horses '
+00003B90= 0D 0A                    799                  dc.b    $0D,$0A
+00003B92= 48 6F 72 73 65 73 ...    800                  dc.b    'Horses without feed are lost.'
+00003BAF= 0D 0A                    801                  dc.b    $0D,$0A
+00003BB1= 45 6E 74 65 72 20 ...    802                  dc.b    'Enter mission distance : ',0
+00003BCB= 45 61 63 68 20 68 ...    803  soldiers_msg:       dc.b    'Each horses need at least 1 Knight and an Stable Hand'
+00003C00= 0D 0A                    804                  dc.b    $0D,$0A
+00003C02= 6D 69 6E 69 6D 75 ...    805                  dc.b    'minimum requirement is 2 i.e. Stable Hand x 1 and Knight x 1.'
+00003C3F= 0D 0A                    806                  dc.b    $0D,$0A
+00003C41= 45 6E 74 65 72 20 ...    807                  dc.b    'Enter # of soldiers : ',0
+00003C58= 41 64 64 20 47 61 ...    808  gameplay_msg:   dc.b    'Add Gameplay !',0
+00003C67= 55 70 64 61 74 65 ...    809  update_msg:     dc.b    'Update Gameplay !',0
+00003C79= 44 72 61 77 20 53 ...    810  draw_msg:       dc.b    'Draw Screen !',0
+00003C87= 53 74 72 69 6B 65 ...    811  hit_msg:        dc.b    'Strike!',0
+00003C8F= 4D 69 73 73 21 00        812  miss_msg:       dc.b    'Miss!',0
+00003C95= 2E 00                    813  loop_msg:       dc.b    '.',0
+00003C97= 45 6E 74 65 72 20 ...    814  replay_msg:     dc.b    'Enter 0 to Quit any other number to replay : ',0
+00003CC5= 53 63 6F 72 65 20 ...    815  hud_msg:        dc.b    'Score : ',0
+00003CCE                           816  
+00003CCE                           817  health:     ds.w    1
+00003CD0                           818  score:      ds.w    1 reserve space for score
+00003CD2                           819  
+00003CD2                           820      end start
 
 No errors detected
 No warnings generated
@@ -832,7 +832,7 @@ Symbol-name         Value
 -------------------------
 ATTACKE             3556
 ATTACKN             34F6
-ATTACK_MSG          3B15
+ATTACK_MSG          3B04
 BARRACKS            312E
 BARRACKS_MSG        38BB
 BATTLE              342A
@@ -847,11 +847,11 @@ CRLF                36C4
 DECORATE            3662
 DIRE_MSG            3896
 DISTANCE            35D2
-DISTANCE_MSG        3B36
+DISTANCE_MSG        3B25
 DRAW                35BE
-DRAW_MSG            3C8A
+DRAW_MSG            3C79
 EAST                352A
-EAST_MSG            3A81
+EAST_MSG            3A70
 END                 3006
 ENDL                36AE
 EXIT                0
@@ -859,20 +859,20 @@ FEED_MSG            395A
 GAME                3000
 GAMELOOP            305E
 GAMEPLAY            35EC
-GAMEPLAY_MSG        3C69
-HEALTH              3CE0
+GAMEPLAY_MSG        3C58
+HEALTH              3CCE
 HIRE_MSG            38E3
 HIRING              31BA
 HIRING_MSG          38F6
-HIT_MSG             3C98
+HIT_MSG             3C87
 HIT_POINT           5
 HORSES              338E
 HORSES_MSG          39AB
 HUD                 360A
-HUD_MSG             3CD6
+HUD_MSG             3CC5
 INPUT               3048
 LOOP                364E
-LOOP_MSG            3CA6
+LOOP_MSG            3C95
 MAX_CHARGE          5
 MAX_HORSES          9
 MINE_LOC            64
@@ -880,30 +880,30 @@ MIN_CHARGE          1
 MIN_FEED            64
 MIN_HORSES          1
 MIN_SOLDIER         6
-MISS_MSG            3CA0
+MISS_MSG            3C8F
 MISS_POINT          8
 NEXT                3652
 NORTH               34CA
-NORTH_MSG           3A34
+NORTH_MSG           3A23
 OUT                 366A
 OWNEDFEED_MSG       3706
 OWNEDHORSES_MSG     36DA
 OWNEDSALT_MSG       36C7
 OWNEDSOLDIERS_MSG   36EF
 REPLAY              368C
-REPLAY_MSG          3CA8
+REPLAY_MSG          3C97
 RETURN_MSG          391F
-SCORE               3CE2
-SOLDIERS_MSG        3BDC
+SCORE               3CD0
+SOLDIERS_MSG        3BCB
 STABLES             325A
 STABLESHOP_MSG      393D
 STABLES_MSG         38C8
 START               1000
 UPDATE              308C
-UPDATE_MSG          3C78
+UPDATE_MSG          3C67
 WELCOME             300A
 WELCOME_MSG         3719
 WEST                358A
-WEST_MSG            3AC4
+WEST_MSG            3AB3
 WIN                 35A4
-WIN_MSG             3A16
+WIN_MSG             3A05
